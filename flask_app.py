@@ -7,6 +7,9 @@ app = Flask(__name__)
 base_url = "https://vm009.rz.uos.de/crawl/index.html"
 index_dir = "indexdir"
 
+@app.errorhandler(500)
+def internal_error(exception):
+   return "<pre>"+traceback.format_exc()+"</pre>"
 
 def get_crawler():
     """Initialize and cache the WebCrawler instance in Flask's application context."""
