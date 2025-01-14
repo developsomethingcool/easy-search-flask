@@ -30,7 +30,7 @@
         <p>No results found for "<b>{{ query }}</b>".</p>
         {% endif %}
 
-        <a href="/" class="back-link">Go back to search</a>
+        <a href="{{ url_for('start') }}" class="back-link">Go back to search</a>
     </div>
 
     <script src="{{ url_for('static', filename='scripts.js') }}"></script>

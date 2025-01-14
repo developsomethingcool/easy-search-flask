@@ -1,6 +1,8 @@
 from flask import Flask, request, g, render_template
 from crawler import WebCrawler  # Import your Crawler class
 from whoosh.qparser import QueryParser
+import traceback  # Import traceback for error handling
+
 
 app = Flask(__name__)
 

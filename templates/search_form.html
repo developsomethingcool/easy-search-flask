@@ -21,7 +21,7 @@
     </div>
 
     <div class="search-container">
-        <form class="search-bar" action="/word_search" method="get">
+        <form class="search-bar" action="{{ url_for('word_search') }}" method="get">
             <i class="fas fa-search search-icon"></i>
             <input 
                 type="text" 
